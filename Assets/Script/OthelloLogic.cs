@@ -252,11 +252,11 @@ public class OthelloLogic : GameController
                     }catch(System.IndexOutOfRangeException){
                         Debug.Log("配列外を参照したので次のifへ");
                     }
-                }
-            }
-            if(putCheck == true){//石が置けなかったら
-                this.canNotText.SetActive(true);//Textに置けない、と画面に表示
-                this.canNotText.GetComponent<AudioSource>().Play();//バツブザーを鳴らす
+                    if(putCheck == true){//石が置けなかったら
+                        this.canNotText.SetActive(true);//Textに置けない、と画面に表示
+                        this.canNotText.GetComponent<AudioSource>().Play();//バツブザーを鳴らす
+                    }
+                }   
             }
         }
     }
